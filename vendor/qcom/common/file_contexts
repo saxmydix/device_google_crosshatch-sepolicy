@@ -33,7 +33,6 @@
 /dev/sensors                                    u:object_r:sensors_device:s0
 /dev/mnh_sm                                     u:object_r:easel_device:s0
 /dev/easelcomm-client                           u:object_r:easel_device:s0
-/dev/citadel0                                   u:object_r:citadel_device:s0
 /dev/pn81a                                      u:object_r:secure_element_device:s0
 # camera rainbow sensor
 /dev/vd6281                                     u:object_r:camera_device:s0
@@ -61,54 +60,6 @@
 /dev/ttyHS0                                     u:object_r:hci_attach_dev:s0
 /dev/wlan                                       u:object_r:wlan_device:s0
 
-# dev block nodes
-/dev/block/platform/soc/1d84000\.ufshc/by-name/abl_[ab]        u:object_r:ab_block_device:s0
-/dev/block/platform/soc/1d84000\.ufshc/by-name/aop_[ab]        u:object_r:ab_block_device:s0
-/dev/block/platform/soc/1d84000\.ufshc/by-name/apdp_[ab]       u:object_r:ab_block_device:s0
-/dev/block/platform/soc/1d84000\.ufshc/by-name/cmnlib64_[ab]   u:object_r:ab_block_device:s0
-/dev/block/platform/soc/1d84000\.ufshc/by-name/cmnlib_[ab]     u:object_r:ab_block_device:s0
-/dev/block/platform/soc/1d84000\.ufshc/by-name/dtbo_[ab]       u:object_r:ab_block_device:s0
-/dev/block/platform/soc/1d84000\.ufshc/by-name/devcfg_[ab]     u:object_r:ab_block_device:s0
-/dev/block/platform/soc/1d84000\.ufshc/by-name/hosd_[ab]       u:object_r:ab_block_device:s0
-/dev/block/platform/soc/1d84000\.ufshc/by-name/hyp_[ab]        u:object_r:ab_block_device:s0
-/dev/block/platform/soc/1d84000\.ufshc/by-name/keymaster_[ab]  u:object_r:ab_block_device:s0
-/dev/block/platform/soc/1d84000\.ufshc/by-name/lockbooter_[ab] u:object_r:ab_block_device:s0
-/dev/block/platform/soc/1d84000\.ufshc/by-name/laf_[ab]        u:object_r:ab_block_device:s0
-/dev/block/platform/soc/1d84000\.ufshc/by-name/msadp_[ab]      u:object_r:ab_block_device:s0
-/dev/block/platform/soc/1d84000\.ufshc/by-name/pmic_[ab]       u:object_r:ab_block_device:s0
-/dev/block/platform/soc/1d84000\.ufshc/by-name/qupfw_[ab]      u:object_r:ab_block_device:s0
-/dev/block/platform/soc/1d84000\.ufshc/by-name/rpm_[ab]        u:object_r:ab_block_device:s0
-/dev/block/platform/soc/1d84000\.ufshc/by-name/storsec_[ab]    u:object_r:ab_block_device:s0
-/dev/block/platform/soc/1d84000\.ufshc/by-name/trusty_[ab]     u:object_r:ab_block_device:s0
-/dev/block/platform/soc/1d84000\.ufshc/by-name/tz_[ab]         u:object_r:ab_block_device:s0
-/dev/block/platform/soc/1d84000\.ufshc/by-name/vbmeta_[ab]     u:object_r:ab_block_device:s0
-/dev/block/platform/soc/1d84000\.ufshc/by-name/xbl_config_[ab] u:object_r:ab_block_device:s0
-
-/dev/block/platform/soc/1d84000\.ufshc/by-name/boot_[ab]       u:object_r:boot_block_device:s0
-
-/dev/block/platform/soc/1d84000\.ufshc/by-name/metadata        u:object_r:metadata_block_device:s0
-
-/dev/block/platform/soc/1d84000\.ufshc/by-name/misc            u:object_r:misc_block_device:s0
-
-/dev/block/platform/soc/1d84000\.ufshc/by-name/frp             u:object_r:frp_block_device:s0
-
-/dev/block/platform/soc/1d84000\.ufshc/by-name/fsc             u:object_r:modem_block_device:s0
-/dev/block/platform/soc/1d84000\.ufshc/by-name/fsg             u:object_r:modem_block_device:s0
-/dev/block/platform/soc/1d84000\.ufshc/by-name/modem_[ab]      u:object_r:modem_block_device:s0
-/dev/block/platform/soc/1d84000\.ufshc/by-name/modemst[12]     u:object_r:modem_block_device:s0
-
-/dev/block/platform/soc/1d84000\.ufshc/by-name/ramdump         u:object_r:ramdump_block_device:s0
-
-/dev/block/platform/soc/1d84000\.ufshc/by-name/ssd             u:object_r:ssd_block_device:s0
-
-/dev/block/platform/soc/1d84000\.ufshc/by-name/product_[ab]    u:object_r:system_block_device:s0
-/dev/block/platform/soc/1d84000\.ufshc/by-name/system_[ab]     u:object_r:system_block_device:s0
-/dev/block/platform/soc/1d84000\.ufshc/by-name/vendor_[ab]     u:object_r:system_block_device:s0
-
-/dev/block/platform/soc/1d84000\.ufshc/by-name/userdata        u:object_r:userdata_block_device:s0
-
-/dev/block/platform/soc/1d84000\.ufshc/by-name/xbl_[ab]        u:object_r:xbl_block_device:s0
-
 # Block device holding the GPT, where the A/B attributes are stored.
 /dev/block/sda                                  u:object_r:gpt_block_device:s0
 
@@ -127,8 +78,6 @@
 /vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.fpc u:object_r:hal_fingerprint_default_exec:s0
 /vendor/bin/thermal-engine      u:object_r:thermal-engine_exec:s0
 /vendor/bin/sensors\.qti        u:object_r:sensors_exec:s0
-/vendor/bin/sscrpcd             u:object_r:sensors_exec:s0
-/vendor/bin/hdcp_srm            u:object_r:hdcp_srm_exec:s0
 /vendor/bin/ssr_setup           u:object_r:ssr_setup_exec:s0
 /vendor/bin/ssr_diag            u:object_r:ssr_diag_exec:s0
 /vendor/bin/pm-service          u:object_r:per_mgr_exec:s0
@@ -161,8 +110,6 @@
 /vendor/bin/cnd                 u:object_r:cnd_exec:s0
 /vendor/bin/easelmanagerd       u:object_r:easel_exec:s0
 /vendor/bin/hw/android\.hardware\.usb@1\.1-service\.crosshatch             u:object_r:hal_usb_impl_exec:s0
-/vendor/bin/hw/android\.hardware\.power@1\.2-service\.crosshatch           u:object_r:hal_power_default_exec:s0
-/vendor/bin/hw/android\.hardware\.power@1\.2-service\.crosshatch-libperfmgr u:object_r:hal_power_default_exec:s0
 /vendor/bin/hw/android\.hardware\.thermal@1\.1-service\.crosshatch         u:object_r:hal_thermal_default_exec:s0
 /vendor/bin/chre                u:object_r:chre_exec:s0
 /vendor/bin/time_daemon         u:object_r:time_daemon_exec:s0
@@ -186,13 +133,7 @@
 /vendor/bin/hw/android\.hardware\.gatekeeper@1\.0-service-qti        u:object_r:hal_gatekeeper_qti_exec:s0
 /vendor/bin/hw/android\.hardware\.gnss@1\.1-service-qti              u:object_r:hal_gnss_qti_exec:s0
 /vendor/bin/hw/android\.hardware\.bluetooth@1\.0-service-qti         u:object_r:hal_bluetooth_default_exec:s0
-/vendor/bin/hw/android\.hardware\.authsecret@1\.0-service\.citadel    u:object_r:hal_authsecret_citadel_exec:s0
-/vendor/bin/hw/android\.hardware\.oemlock@1\.0-service\.citadel       u:object_r:hal_oemlock_citadel_exec:s0
 /vendor/bin/hw/vendor\.qti\.hardware\.tui_comm@1\.0-service-qti       u:object_r:hal_tui_comm_exec:s0
-/vendor/bin/hw/android\.hardware\.weaver@1\.0-service\.citadel        u:object_r:hal_weaver_citadel_exec:s0
-/vendor/bin/hw/android\.hardware\.keymaster@4\.0-service.citadel     u:object_r:hal_keymaster_citadel_exec:s0
-/vendor/bin/hw/citadeld                                              u:object_r:citadeld_exec:s0
-/vendor/bin/hw/init_citadel                                          u:object_r:init_citadel_exec:s0
 /vendor/bin/hw/vendor\.google\.radioext@1\.0-service                 u:object_r:hal_radioext_default_exec:s0
 /vendor/bin/hw/android\.hardware\.neuralnetworks@1\.0-service-paintbox    u:object_r:hal_neuralnetworks_paintbox_exec:s0
 /vendor/bin/hw/android\.hardware\.health@2\.0-service\.crosshatch         u:object_r:hal_health_default_exec:s0
@@ -200,15 +141,11 @@
 /vendor/bin/hw/hardware\.google\.media\.c2@1\.0-service-software u:object_r:mediacodec_exec:s0
 /vendor/bin/hw/vendor\.qti\.hardware\.display\.allocator@1\.0-service   u:object_r:hal_graphics_allocator_default_exec:s0
 /vendor/bin/hw/vendor\.google\.wireless_charger@1\.0-service-vendor       u:object_r:hal_wlc_exec:s0
-/vendor/bin/hw/android\.hardware\.neuralnetworks@1\.1-service-qti u:object_r:hal_neuralnetworks_default_exec:s0
-/vendor/bin/hw/wait_for_strongbox                                   u:object_r:wait_for_strongbox_exec:s0
-/(vendor|system/vendor)/bin/hw/android\.hardware\.secure_element@1\.0-service-disabled   u:object_r:hal_secure_element_default_exec:s0
 
 ###############################################
 # same-process HAL files and their dependencies
 #
 /vendor/lib(64)?/hw/android\.hardware\.graphics\.mapper@2\.0-impl-qti-display\.so   u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/hw/gralloc\.sdm845\.so    u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libgrallocutils\.so       u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libgralloccore\.so        u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libqdMetaData\.so         u:object_r:same_process_hal_file:s0
@@ -218,7 +155,6 @@
 /vendor/lib(64)?/libadreno_utils\.so       u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libgsl\.so                u:object_r:same_process_hal_file:s0
 
-/vendor/lib(64)?/hw/vulkan\.sdm845\.so     u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libEGL_adreno\.so         u:object_r:same_process_hal_file:s0
 
 /vendor/lib(64)?/libdrmutils\.so           u:object_r:same_process_hal_file:s0
