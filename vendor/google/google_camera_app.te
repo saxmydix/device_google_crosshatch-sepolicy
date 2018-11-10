@@ -42,3 +42,5 @@ allow google_camera_app system_app_data_file:file { read write getattr };
 allow google_camera_app hal_paintbox_hwservice:hwservice_manager find;
 binder_call(google_camera_app, easel)
 allow google_camera_app easel_device:chr_file rw_file_perms;
+
+allow google_camera_app vendor_default_prop:file read;

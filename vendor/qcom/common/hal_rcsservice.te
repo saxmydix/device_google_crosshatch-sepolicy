@@ -42,3 +42,5 @@ allow hal_rcsservice self:capability net_bind_service;
 set_prop(hal_rcsservice, ctl_vendor_imsrcsservice_prop)
 
 dontaudit hal_rcsservice kernel:system module_request;
+
+allow hal_rcsservice diag_device:chr_file { read write };

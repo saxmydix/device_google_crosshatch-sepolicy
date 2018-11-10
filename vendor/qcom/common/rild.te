@@ -30,3 +30,5 @@ set_prop(rild, vendor_radio_prop)
 allow rild proc_qtaguid_stat:file r_file_perms;
 
 hal_server_domain(rild, hal_secure_element)
+
+allow rild socket_device:dir write;

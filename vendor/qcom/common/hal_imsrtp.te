@@ -32,3 +32,5 @@ get_prop(hal_imsrtp, ims_prop)
 binder_call(hal_imsrtp, radio)
 
 dontaudit hal_imsrtp kernel:system module_request;
+
+allow hal_imsrtp diag_device:chr_file { read write };
