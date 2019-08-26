@@ -6,3 +6,8 @@ allow platform_app persist_sensors_file:file r_file_perms;
 allow platform_app hal_wlc_hwservice:hwservice_manager find;
 allow platform_app hal_wlc:binder call;
 allow platform_app vendor_default_prop:file read;
+
+allow platform_app vendor_default_prop:file r_file_perms;
+allow platform_app cnd_prop:file r_file_perms;
+get_prop(platform_app, vendor_default_prop)
+get_prop(platform_app, cnd_prop)
