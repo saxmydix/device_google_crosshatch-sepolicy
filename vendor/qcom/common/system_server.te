@@ -14,3 +14,9 @@ dontaudit system_server self:capability sys_module;
 dontaudit system_server vendor_display_prop:file r_file_perms;
 
 allow system_server vendor_default_prop:file read;
+allow system_server vendor_display_prop:file r_file_perms;
+allow system_server vendor_default_prop:file r_file_perms;
+get_prop(system_server, vendor_display_prop)
+get_prop(system_server, vendor_default_prop)
+
+get_prop(system_server, cnd_prop)
